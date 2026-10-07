@@ -43,6 +43,5 @@ def write(url):
     if result == "TimeOut" or result=="INVALID URL" or result=="UNREACHABLE":
         status,time,redirect,result=0
 
-    
-
-    
+    with open ("report.txt","a") as file :
+        file.write(f"{url:<20} {status:<8} {time:<10} {redirect:<12} {result}\n")
